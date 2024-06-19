@@ -1,0 +1,41 @@
+
+
+table{ 
+  border:1px solid white;
+  border-radius: 10px;
+  text-align: justify;
+  width: 70%;
+  top:30px;
+  background-color: rgba(16, 12, 12, 1);
+  margin: 0 auto;
+}
+th{
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid white;
+  }
+  td:first-child {
+    text-align: center;
+  }
+  
+  td:last-child {
+    text-align: justify;
+    width: 70%;
+  }
+th, td{
+  padding: 10px;
+}
+@media screen and (max-width:500px) {
+  #tablazat{
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width:400px) {
+  #tablazat{
+    width: 100%;
+    height: auto;
+    font-size:medium;
+  }
+}

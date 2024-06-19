@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="alap.css">
+        <link rel="stylesheet" href="kapcsolat.css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        
+        <title>Lemezbarátok - Kapcsolat</title>
+    </head>
+    <body>
+        <script src="kapcsolat.js"></script>
+        <a href="#maintartalom" class="ugras">Ugrás a tartalomra</a>
+        <header class="header">
+            <div class="logo"><img src="logo2.png" alt="logo"></div>
+            <nav class="menu">
+                <ul class="gombok">
+                    <li class="menu-item"><a href="index.html">Kezdőlap</a></li>
+                    <li class="menu-item"><a href="ismerteto.html">Mi az a vinyl lemez?</a></li>
+                    <li class="menu-item"><a href="tippek.html">Tippek kezdő gyűjtőknek</a></li>
+                    <li class="menu-item"><a href="kulonleges.html">Különleges magyar lemezek</a></li>
+                </ul>
+            </nav>
+            <div class="kapcsolat"><a href="kapcsolat.html">Kapcsolat</a></div>
+                <div class="hamburger">&#9776;
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            
+        </header>
+        <main id="maintartalom">
+            <div class="kozep">
+            <p>Van bármi ötleted, hogy mivel lehetne kiegészíteni/javítani az oldalt? Esetleg felmerült benned valami kérdés? Írj emailt!</p>
+                <form class="form" action="mailto:nlehel03@gmail.com" method="post" enctype="text/plain">
+                    <label for="nev">Név:</label><br>
+                    <textarea id="nev" required placeholder="vezetéknév+keresztnév" class="bevitel"></textarea><br>
+                    <label for="email">E-mail cím:</label> <br>
+                    <textarea id="email" required placeholder="példa@példa.hu" class="bevitel"></textarea><br>
+                    <label for="uzenet">Levél tartalma:</label><br>
+                    <textarea id="uzenet" placeholder="..."></textarea><br>
+                    <input id="torles" type="reset" value="Törlés" class="formgomb">
+                    <p>Feliratkozol a hírlevélre?</p>
+                    <input type="radio" id="igen" value="Igen" name="radio">
+                    <label for="igen">Igen</label>
+                    <input type="radio" id="nem" value="Nem" name="radio">
+                    <label for="nem">Nem</label>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="pipa">
+                        <label for="pipa">A szabályzatot elfogadom</label>
+                    </div>
+                    <input id="gomb" type="submit" value="Küldés" class="formgomb" disabled>
+                    
+                    
+                </form>
+            </div>
+        </main>    
+        <footer>
+            <div>
+                <nav class="footerNav">
+                    <ul class="gombok">
+                        <li class="menu-item"><a href="index.html">Kezdőlap</a></li>
+                        <li class="menu-item"><a href="ismerteto.html">Mi az a vinyl lemez?</a></li>
+                        <li class="menu-item"><a href="tippek.html">Tippek kezdő gyűjtőknek</a></li>
+                        <li class="menu-item"><a href="kulonleges.html">Különleges magyar lemezek</a></li>
+                    </ul>
+                </nav>
+                  
+            </div>
+            <div class="footerBottom">
+                <p>&copy;Németh Lehel Művek - <script>document.write(new Date().getFullYear())</script></p>
+            </div>
+        </footer>
+        <script>
+            const hamburger=document.querySelector(".hamburger");
+            const gombok=document.querySelector(".gombok");
+            const menu = document.querySelector('.menu');
+            const body=document.querySelector("body");
+            
+            hamburger.addEventListener("click",()=>{
+                hamburger.classList.toggle("active");
+                gombok.classList.toggle("active");
+                body.classList.toggle("menu-open"); 
+                menu.classList.toggle('active');
+                if (menu.classList.contains('active')) {
+                    header.style.height = '550px';
+                } else {
+                    header.style.height = '100px';
+                }
+            });
+            var checker = document.getElementById('szabalyzat');
+            var gomb = document.getElementById('gomb');
+            checker.onchange=function(){
+                gomb.disabled=!!this.checked;
+            };
+            /*function ellenorzes() {
+                if (checker.checked)
+                {
+                    gomb.disabled = false; 
+                }
+                else 
+                {
+                    gomb.disabled = true;
+                }
+                
+            }
+            checker.addEventListener('change', ellenorzes);*/
+        </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+.gallery img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+.omegakep{
+    width: 45%;
+    height: auto;
+    display: flex;
+}
