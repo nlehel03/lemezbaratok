@@ -29,13 +29,20 @@ th, td{
 @media screen and (max-width:500px) {
   #tablazat{
     width: 100%;
+    max-width: 100%;
     height: auto;
+  }
+  .kozep{
+    margin-right: 0;
+    padding: 5px;
   }
 }
 @media screen and (max-width:400px) {
   #tablazat{
     width: 100%;
+    max-width: 100%;
     height: auto;
     font-size:medium;
+    
   }
 }

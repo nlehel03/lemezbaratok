@@ -1,8 +1,25 @@
-.gallery img {
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gallery-item {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.gallery-item img {
     width: 100%;
     height: auto;
+    display: block;
     cursor: pointer;
+    object-fit: cover;
+    border-radius: 5px;
 }
+
 .modal-content img {
     width: 100%;
     height: auto;
@@ -11,4 +28,26 @@
     width: 45%;
     height: auto;
     display: flex;
+}
+.imgthumbnail {
+    border: 5px solid white; 
+    padding: 10px; 
+    border-radius: 5px; 
+    margin:5px;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.box {
+    flex: 1 1 45%; 
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 5px;
+}
+@media (max-width: 1200px) {
+    .box {
+        flex: 1 1 100%; /* Teljes szélesség kisebb képernyőkön */
+    }
 }
